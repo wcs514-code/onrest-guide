@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="zh-HK">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#12345b">
+  <title>安息同行｜基督教安息禮流程助手</title>
+  <style>
+    :root{--navy:#12345b;--blue:#176fc1;--sky:#eaf4fc;--ink:#172a3a;--muted:#64788a;--line:#d8e4ee;--teal:#238178;--white:#fff;--shadow:0 8px 24px rgba(18,52,91,.1)}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#f6fbfe;color:var(--ink);font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",Arial,sans-serif}button,input{font:inherit}button{cursor:pointer}button:focus-visible,input:focus-visible{outline:3px solid #8bc9f6;outline-offset:2px}
+    header{height:78px;padding:0 clamp(18px,4vw,64px);display:flex;align-items:center;gap:30px;background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:20}.brand{display:flex;align-items:center;gap:11px;white-space:nowrap}.mark{width:43px;height:43px;border:2px solid #8fc8f1;border-radius:50%;display:grid;place-items:center;color:var(--blue);font-size:24px;background:#eff8ff}.brand b{display:block;color:var(--navy);font-size:25px;letter-spacing:.08em}.brand small{display:block;color:#60768a;font-size:11px;letter-spacing:.1em}.nav{display:flex;flex:1;justify-content:center;gap:8px}.nav button{border:0;background:transparent;padding:11px 15px;border-radius:9px;font-weight:700;color:var(--ink)}.nav button:hover,.nav button.active{color:var(--blue);background:var(--sky)}.menu{display:none;margin-left:auto;border:0;background:transparent;color:var(--navy);font-size:25px}
+    .view{display:none}.view.active{display:block}.hero{padding:58px clamp(24px,5vw,78px) 34px;display:grid;grid-template-columns:minmax(420px,.9fr) minmax(560px,1.3fr);gap:35px;align-items:center;background:linear-gradient(120deg,#eff8ff,#fff 58%,#edf7ff)}.eyebrow{color:var(--blue);font-weight:800;letter-spacing:.08em}.hero h1,.intro h1{color:var(--navy);font-size:clamp(40px,4.2vw,62px);line-height:1.18;margin:14px 0 20px}.hero p,.intro p{color:var(--muted);font-size:18px;line-height:1.75}.actions{display:flex;gap:15px;margin-top:28px}.primary,.secondary{min-height:51px;padding:0 25px;border-radius:10px;font-weight:800;font-size:17px}.primary{border:1px solid var(--navy);background:linear-gradient(135deg,var(--navy),#0768b8);color:#fff;box-shadow:0 5px 14px rgba(18,52,91,.15)}.secondary{border:2px solid var(--blue);background:#fff;color:var(--blue)}.flow{background:#fff;border:1px solid var(--line);border-radius:18px;padding:27px;box-shadow:var(--shadow)}.flow-head{display:flex;justify-content:space-between;align-items:center}.flow h2{margin:0;color:var(--navy);font-size:21px}.status{background:var(--sky);color:var(--blue);padding:8px 12px;border-radius:99px;font-weight:700;font-size:13px}.phase-line{display:grid;grid-template-columns:repeat(5,1fr);position:relative;margin-top:29px}.phase-line:before{content:"";position:absolute;top:26px;left:9%;right:9%;border-top:3px dashed #c7dbea}.phase-line button{position:relative;z-index:1;border:0;background:transparent;display:flex;flex-direction:column;align-items:center;gap:10px;padding:0 3px;color:var(--ink)}.num{width:52px;height:52px;border:2px solid #c8d7e4;border-radius:50%;display:grid;place-items:center;background:#fff;color:#718396;font-size:22px;font-weight:800;box-shadow:0 0 0 6px #fff}.phase-line button:hover .num,.phase-line button.current .num{background:var(--blue);border-color:var(--blue);color:#fff;box-shadow:0 0 0 4px #fff,0 0 0 7px #b3d9f5}.phase-line b{font-size:14px;min-height:38px}.phase-line small{font-size:26px;color:var(--blue)}
+    .quick{display:grid;grid-template-columns:1fr 1.1fr 1fr;gap:20px;padding:0 clamp(24px,5vw,78px) 45px;background:linear-gradient(#f2f9fe,#f6fbfe)}.card{background:#fff;border:1px solid var(--line);border-radius:15px;padding:23px;box-shadow:var(--shadow)}.card-title{display:flex;align-items:center;gap:11px;border-bottom:1px solid var(--line);padding-bottom:13px}.icon{width:39px;height:39px;display:grid;place-items:center;border-radius:50%;background:#e0f2ef;color:var(--teal);font-weight:900;font-size:20px}.card h2{margin:0;color:var(--navy);font-size:20px}.checklist{list-style:none;padding:0;margin:10px 0}.checklist li{padding:10px 0;border-bottom:1px solid #edf2f6;font-weight:600}.checklist li:before{content:"✓";color:var(--teal);font-weight:900;margin-right:10px}.mini{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:14px}.mini button{padding:14px;border:1px solid #c9dff0;border-radius:9px;background:#fff;color:var(--blue);font-weight:800}.mini button:hover{background:var(--sky)}.card>p{color:var(--muted);line-height:1.7}.full{width:100%}.note{text-align:center;padding:0 22px 38px;color:#728598;font-size:12px;line-height:1.6}
+    .shell{max-width:1160px;margin:auto;padding:52px 25px 80px;min-height:72vh}.intro{max-width:800px}.intro h1{font-size:46px;margin-bottom:12px}.intro p{font-size:17px}.role{display:inline-flex;background:#e5f0f9;padding:5px;border-radius:11px;margin:22px 0 16px}.role button{border:0;background:transparent;padding:12px 22px;border-radius:8px;font-weight:800;color:#577083}.role button.active{background:#fff;color:var(--blue);box-shadow:0 2px 8px rgba(18,52,91,.12)}.progress{background:#fff;border:1px solid var(--line);border-radius:11px;padding:16px 18px}.progress-top{display:flex;justify-content:space-between}.bar{height:8px;background:#e1ebf2;border-radius:99px;margin-top:11px;overflow:hidden}.bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--teal),#69bdb6);transition:.2s}.step-tabs{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin:21px 0}.step-tabs button{padding:13px 6px;border:1px solid var(--line);border-radius:9px;background:#fff;color:#587083;font-weight:700}.step-tabs button.active{background:var(--navy);color:#fff;border-color:var(--navy)}.tasks-head{display:flex;justify-content:space-between;align-items:center;margin-top:28px}.tasks-head h2{color:var(--navy)}.tasks-head input{width:300px;padding:12px 14px;border:1px solid #c6d8e5;border-radius:9px}.task-list{display:grid;gap:11px}.task{display:flex;gap:13px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:18px;cursor:pointer}.task input{position:absolute;opacity:0}.tick{flex:0 0 27px;width:27px;height:27px;border:2px solid #aec4d5;border-radius:7px;color:transparent;display:grid;place-items:center}.task.done{background:#f2fbf9}.task.done .tick{background:var(--teal);border-color:var(--teal);color:#fff}.task b{display:block;font-size:16px}.task small{display:block;color:var(--muted);line-height:1.6;margin-top:6px}.urgent{color:#b54444;background:#fff0f0;padding:2px 7px;border-radius:99px;font-size:11px}.empty{text-align:center;padding:35px;background:#fff;border:1px dashed var(--line);border-radius:11px;color:var(--muted)}
+    .lit-layout{display:grid;grid-template-columns:250px 1fr;gap:22px;margin-top:30px}.lit-nav{display:flex;flex-direction:column;gap:7px}.lit-nav button{text-align:left;padding:13px 15px;border:1px solid var(--line);border-radius:10px;background:#fff;color:var(--navy);font-weight:800}.lit-nav button.active{background:var(--navy);color:#fff}.lit-card{background:#fff;border:1px solid var(--line);border-radius:15px;padding:27px;box-shadow:var(--shadow)}.lit-head{display:flex;justify-content:space-between;border-bottom:1px solid var(--line);padding-bottom:20px}.lit-head h2{font-size:31px;color:var(--navy);margin:4px 0}.lit-head span{color:var(--blue);font-weight:800}.verse{text-align:right;color:var(--muted);line-height:1.6}.verse b{color:var(--navy)}.lit-list{list-style:none;padding:0;margin:14px 0}.lit-list li{display:grid;grid-template-columns:42px 1fr;padding:13px 5px;border-bottom:1px solid #edf2f6}.lit-list li span{color:var(--blue);font-weight:800}.tip,.notice{background:var(--sky);border-left:4px solid var(--blue);border-radius:8px;padding:18px 21px;margin-top:20px}.tip p,.notice p{margin-bottom:0;line-height:1.65;color:#526d83}.docs,.choices{display:grid;grid-template-columns:1fr 1fr;gap:19px;margin-top:30px}.docs h2,.choices h2{color:var(--navy)}.doc-item{display:flex;gap:11px;align-items:center;padding:12px 0;border-top:1px solid #edf2f6;cursor:pointer}.doc-item input{position:absolute;opacity:0}.doc-item.done b{text-decoration:line-through;color:#789}.choices p,.choices li{color:var(--muted);line-height:1.7}.choice-icon{width:49px;height:49px;display:grid;place-items:center;background:var(--sky);color:var(--blue);font-size:24px;border-radius:13px}footer{background:#102f51;color:#fff;padding:30px clamp(20px,5vw,70px)}footer .brand b,footer .brand small{color:#fff}footer p{margin:18px 0 5px}footer small{color:#bcd0e1}
+    @media(max-width:1000px){.hero{grid-template-columns:1fr}.quick{grid-template-columns:1fr 1fr}.quick .card:last-child{grid-column:1/3}}
+    @media(max-width:700px){html,body{width:100%;max-width:100%;overflow-x:hidden}header{height:66px;padding:0 13px}.brand{gap:8px}.mark{width:34px;height:34px;font-size:19px}.brand b{font-size:18px}.brand small{font-size:8px}.menu{display:block}.nav{display:none;position:absolute;top:65px;left:0;right:0;background:#fff;padding:9px 13px;box-shadow:var(--shadow);flex-direction:column}.nav.open{display:flex}.hero{display:block;padding:25px 15px 20px}.eyebrow{font-size:12px}.hero h1{font-size:30px;line-height:1.28;margin:11px 0}.hero p{font-size:14px;line-height:1.65}.actions{flex-direction:column;gap:9px;margin-top:19px}.primary,.secondary{width:100%;min-height:47px;font-size:15px}.flow{margin-top:25px;padding:16px 13px}.flow h2{font-size:17px}.status{font-size:10px;padding:6px 8px}.phase-line{grid-template-columns:1fr;gap:0;margin-top:13px}.phase-line:before{left:18px;right:auto;top:20px;bottom:20px;border-top:0;border-left:2px dashed #c7dbea}.phase-line button{display:grid;grid-template-columns:38px 1fr 27px;align-items:center;text-align:left;gap:10px;padding:6px 0}.num{width:36px;height:36px;font-size:16px;box-shadow:0 0 0 3px #fff}.phase-line b{font-size:13px;min-height:0}.phase-line small{font-size:19px;text-align:center}.quick{grid-template-columns:1fr;padding:0 15px 25px;gap:13px}.quick .card:last-child{grid-column:auto}.card{padding:18px}.card h2{font-size:17px}.icon{width:35px;height:35px;font-size:17px}.note{font-size:10px;padding-bottom:30px}.shell{padding:29px 14px 52px}.intro h1{font-size:30px;line-height:1.3;margin-top:9px}.intro p{font-size:14px}.role{display:flex;width:100%;margin:17px 0 14px}.role button{flex:1;padding:10px 5px;font-size:12px}.step-tabs{grid-template-columns:1fr;gap:6px;margin:16px 0}.step-tabs button{text-align:left;padding:10px}.tasks-head{align-items:stretch;flex-direction:column;margin-top:18px}.tasks-head h2{font-size:22px}.tasks-head input{width:100%;margin-bottom:13px}.task{padding:14px 12px}.task b{font-size:14px}.lit-layout{grid-template-columns:1fr;margin-top:22px}.lit-nav{display:grid;grid-template-columns:1fr 1fr}.lit-nav button{padding:11px;font-size:13px}.lit-card{padding:17px 14px}.lit-head{flex-direction:column}.lit-head h2{font-size:26px}.verse{text-align:left;margin-top:8px}.docs,.choices{grid-template-columns:1fr;gap:13px;margin-top:22px}.card,.choices .card{border-radius:12px}.mini{grid-template-columns:1fr 1fr}footer{padding:25px 16px}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand"><span class="mark">✝</span><span><b>安息同行</b><small>基督教安息禮流程助手</small></span></div>
+    <button class="menu" aria-label="開啟選單" onclick="toggleMenu()">☰</button>
+    <nav class="nav" id="nav">
+      <button data-view="home" class="active">流程總覽</button>
+      <button data-view="tasks">工作清單</button>
+      <button data-view="liturgy">禮序範本</button>
+      <button data-view="documents">文件清單</button>
+      <button data-view="aftercare">安葬選擇</button>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" class="view active">
+      <div class="hero">
+        <div><span class="eyebrow">給家屬與教牧的同行工具</span><h1>一步一步，陪你<br>安排每個重要環節</h1><p>由臨終關懷、辦理文件，到安息禮、火葬及安葬安排，清楚知道下一步要做甚麼。</p><div class="actions"><button class="primary" onclick="showView('tasks')">開始安排　→</button><button class="secondary" onclick="showView('liturgy')">查看禮序　→</button></div></div>
+        <div class="flow"><div class="flow-head"><h2>▱　流程總覽</h2><span class="status" id="homeStatus">○ 尚未開始</span></div><div class="phase-line" id="phaseLine"></div></div>
+      </div>
+      <div class="quick">
+        <article class="card"><div class="card-title"><span class="icon">✓</span><h2>先做這三件事</h2></div><ul class="checklist"><li>聯絡醫生／醫院</li><li>通知教會牧者</li><li>預備死亡登記文件</li></ul><button class="secondary full" onclick="showView('tasks')">開啟完整清單</button></article>
+        <article class="card"><div class="card-title"><span class="icon">▣</span><h2>禮儀快速入口</h2></div><div class="mini"><button onclick="openLiturgy('casketing')">大殮禮</button><button onclick="openLiturgy('rest')">安息禮</button><button onclick="openLiturgy('departure')">出殯禮</button><button onclick="openLiturgy('cremation')">火葬禮</button></div></article>
+        <article class="card"><div class="card-title"><span class="icon">?</span><h2>不確定從哪裡開始？</h2></div><p>先選擇您的身分及目前階段，系統會提供相應的下一步清單。</p><button class="primary full" onclick="showView('tasks')">查看即時指引　→</button></article>
+      </div>
+      <p class="note">內容根據胡志成牧師提供的喪禮流程及禮序範本整理；實際法定程序、申請資格及收費請向相關政府部門、墳場及殯儀服務機構核實。</p>
+    </section>
+
+    <section id="tasks" class="view shell">
+      <div class="intro"><span class="eyebrow">個人化工作清單</span><h1>現在應該做甚麼？</h1><p>選擇身分及進度，逐項完成。勾選紀錄只會保存在目前裝置。</p></div>
+      <div class="role"><button id="familyBtn" class="active" onclick="setRole('family')">我是家屬</button><button id="pastorBtn" onclick="setRole('pastor')">我是教牧／教會同工</button></div>
+      <div class="progress"><div class="progress-top"><b id="progressText">0／0 已完成</b><span id="progressPct">0%</span></div><div class="bar"><i id="progressBar"></i></div></div>
+      <div class="step-tabs" id="stepTabs"></div>
+      <div class="tasks-head"><h2 id="taskTitle"></h2><input id="search" placeholder="搜尋這階段的工作…" oninput="renderTasks()"></div>
+      <div class="task-list" id="taskList"></div>
+    </section>
+
+    <section id="liturgy" class="view shell">
+      <div class="intro"><span class="eyebrow">可選擇及調整</span><h1>基督教喪禮禮序範本</h1><p>按禮儀查看建議次序；牧者可因家庭、宗派、場地及時間作合宜調整。</p></div>
+      <div class="lit-layout"><aside class="lit-nav" id="litNav"></aside><article class="lit-card" id="litCard"></article></div>
+    </section>
+
+    <section id="documents" class="view shell">
+      <div class="intro"><span class="eyebrow">集中整理，避免遺漏</span><h1>文件及物品清單</h1><p>把正本與副本分開存放；重要文件可拍照備份，但應妥善保護個人資料。</p></div>
+      <div class="docs" id="docsGrid"></div>
+      <div class="notice"><b>重要提醒</b><p>2015／2017年的墳場收費表只可作歷史參考，不宜當作現行價目。申請前須向墳場或聯會索取最新資格、文件及收費資料。</p></div>
+    </section>
+
+    <section id="aftercare" class="view shell">
+      <div class="intro"><span class="eyebrow">火葬後或遺體安葬</span><h1>選擇最終安放方式</h1><p>先考慮信仰意願、家人需要、申請資格、費用、輪候時間及日後拜祭便利。</p></div>
+      <div class="choices">
+        <article class="card"><span class="choice-icon">▥</span><h2>骨灰龕位／上位</h2><p>可考慮政府、教會或私營龕位。先查核資格、牌照、年期、管理費及上位安排。</p><ul><li>申請及輪候文件</li><li>骨灰盅尺寸與刻字</li><li>安排骨灰安厝禮</li></ul></article>
+        <article class="card"><span class="choice-icon">❀</span><h2>紀念花園撒灰</h2><p>在指定紀念花園撒放骨灰，通常須預約及遵守場地規則，可配合簡短撒灰禮。</p><ul><li>預約日期與參與人數</li><li>確認可用花瓣／物品</li><li>預備撒灰禮序</li></ul></article>
+        <article class="card"><span class="choice-icon">≈</span><h2>海上撒灰</h2><p>可申請政府安排或合規私人服務，留意天氣、船程、安全及家人身體狀況。</p><ul><li>申請許可與船期</li><li>交通及暈浪準備</li><li>預備防風禮序</li></ul></article>
+        <article class="card"><span class="choice-icon">✝</span><h2>基督教墳場／土葬</h2><p>一般須符合教會會籍或信仰證明等資格；墓地可能有使用年期及續期規定。</p><ul><li>教會證明及申請資格</li><li>墓碑設計與刻字核對</li><li>安排土葬或安葬禮</li></ul></article>
+      </div>
+    </section>
+  </main>
+  <footer><div class="brand"><span class="mark">✝</span><span><b>安息同行</b><small>基督教安息禮流程助手</small></span></div><p>在哀傷中，讓每一步都有清楚指引，也有同行與盼望。</p><small>本工具提供一般流程整理，不能取代政府、醫療、法律、墳場或殯儀機構的正式指引。</small></footer>
+
+  <script>
+    const phases=[["臨終與離世","♡"],["文件及殯儀","▤"],["安息禮準備","✦"],["出殯與火葬","✝"],["骨灰安放","◇"]];
+    const tasks={
+      family:[
+        [1,"聯絡醫生／醫院，取得醫學死亡證明","在醫院離世由院方說明；在家或其他地方離世，應先按情況聯絡醫生或警方。",1],
+        [1,"通知教會牧者及核心家人","請牧者提供臨終、哀傷陪伴及安息禮安排支援。",1],
+        [2,"辦理死亡登記及領取相關文件","核對死者中英文姓名、身份證資料及死亡日期；實際程序以政府部門最新要求為準。"],
+        [2,"選擇殯儀服務並初步預算","決定守夜、安息禮、出殯日期、地點、靈堂大小、棺木、車輛及解慰飯。"],
+        [2,"準備先人衣物及遺照","衣物用大袋裝好並寫上姓名；另備清晰相片製作遺照及程序表。"],
+        [3,"確認安息禮資料","整理生平、家屬名單、見證分享、選讀經文、詩歌及致謝內容。"],
+        [3,"安排親友與現場用品","估算人數；安排座位、接待、簽到、帛金、吉儀、飲用水及交通。"],
+        [4,"確認出殯及火葬／安葬行程","核對集合時間、靈車、旅遊車、火葬場或墳場時段，通知所有相關人士。"],
+        [5,"選擇骨灰或遺體最終安放方式","可選骨灰龕位、基督教墳場安厝、紀念花園撒灰、海上撒灰或土葬；先查資格及最新收費。"],
+        [5,"安排追思與哀傷關顧","保存重要文件及禮序，安排周年追思（如適用），讓家人有空間哀傷。"]
+      ],
+      pastor:[
+        [1,"聯絡家屬並提供臨終／離世禱告","了解信仰背景、家庭關係、即時情緒及實際需要。",1],
+        [2,"與家屬及殯儀服務協調時間","確認大殮、安息禮、出殯、火葬／安葬各禮儀時段及場地限制。"],
+        [3,"建立安息禮程序","確認宣召、詩歌、祈禱、讀經、生平、見證、慰勉、致謝與祝福；分配負責人。"],
+        [3,"安排教會支援隊伍","接待約3–4人，另安排司琴、領詩、音響、襄禮、程序表及家屬陪伴。"],
+        [3,"核對神學與稱謂","使用安慰與復活盼望的信息；核對姓名、親屬稱謂及經文。"],
+        [4,"預備出殯及火葬／安葬短禮","短禮應配合場地時間；攜帶禮序、聖經、詩歌、花朵及所需物品。"],
+        [5,"主持撒灰／骨灰安厝／土葬禮","按所選方式採用合適禮序，事先查清場地規則及可進場人數。"],
+        [5,"安排喪後關顧","在首星期、一個月及重要節期主動聯絡家屬，留意複雜哀傷或輔導需要。"]
+      ]
+    };
+    const liturgies=[
+      ["end","臨終禮","離世前／床邊","約翰福音14:27；詩篇23篇",["宣召","唱詩：耶和華是愛","祈禱","讀經：詩篇23篇","慰勉","唱詩：奇異恩典","祝福","臨終告別"]],
+      ["casketing","大殮禮","安息禮前","詩篇90篇；帖撒羅尼迦前書4:13–18",["默禱","宣召","祈禱","讀經","瞻仰遺容／封棺","安慰說話","祝福"]],
+      ["rest","安息禮","主要追思禮拜","約翰福音11:25–26；啟示錄21:3–5",["序樂及安靜","宣召","唱詩","祈禱","讀經","生平簡述","親友見證","詩班／獻詩","慰勉信息","家屬致謝","唱詩","祝福","瞻仰遺容"]],
+      ["departure","出殯禮","離開靈堂前","詩篇121篇",["宣召","祈禱","讀經","安慰與託付","主禱文","祝福","扶靈／出發"]],
+      ["cremation","火葬禮","火葬場","詩篇103:13–17",["默禱","唱詩：安居主懷","祈禱","讀經：詩篇103:13–17","勸慰","祝福","獻花","按鈕／告別","禮成"]],
+      ["ashes","撒灰禮","紀念花園／海上","啟示錄21:2–7",["默禱","唱詩：讚善美地","祈禱","讀經：啟示錄21:2–7","撒灰","唱詩：願你平安","主禱文","祝福","禮成"]],
+      ["niche","骨灰安厝禮","上位／安放龕位","啟示錄21:2–7",["默禱","唱詩：讚善美地","祈禱","讀經","骨灰安厝","唱詩：願你平安","主禱文","祝福","禮成"]],
+      ["burial","土葬禮","墳場","哥林多前書15:42–44",["宣召","祈禱","讀經","安葬宣言","覆土／獻花","主禱文","祝福"]]
+    ];
+    const docs=[
+      ["醫療及身份","醫學死亡證明／死因文件","死者香港身份證／旅行證件","申請人身份證","死亡登記文件及副本"],
+      ["殯儀及禮堂","殯儀服務合約及報價","火葬／土葬預約文件","靈堂、車輛及解慰飯確認","遺照、生平及家屬名單"],
+      ["教會及禮儀","教會會籍／受洗證明（如申請墳場）","安息禮程序表","詩歌、經文、見證及講稿","主禮、司琴、領詩與接待名單"],
+      ["骨灰／安葬","領取骨灰文件","龕位／墳場申請及資格證明","墓碑／骨灰盅資料","撒灰許可及預約文件"]
+    ];
+    let role="family",phase=1,selectedLit="rest";
+    let done=JSON.parse(localStorage.getItem("onrest-progress")||"[]");
+    function save(){localStorage.setItem("onrest-progress",JSON.stringify(done))}
+    function toggleMenu(){document.getElementById("nav").classList.toggle("open")}
+    function showView(id){document.querySelectorAll(".view").forEach(x=>x.classList.toggle("active",x.id===id));document.querySelectorAll(".nav button").forEach(x=>x.classList.toggle("active",x.dataset.view===id));document.getElementById("nav").classList.remove("open");window.scrollTo({top:0,behavior:"smooth"});if(id==="tasks")renderTasks()}
+    document.querySelectorAll(".nav button").forEach(b=>b.onclick=()=>showView(b.dataset.view));
+    function setPhase(n){phase=n;showView("tasks");renderAll()}
+    function setRole(r){role=r;document.getElementById("familyBtn").classList.toggle("active",r==="family");document.getElementById("pastorBtn").classList.toggle("active",r==="pastor");renderTasks()}
+    function renderFlow(){document.getElementById("phaseLine").innerHTML=phases.map((p,i)=>`<button class="${phase===i+1?"current":""}" onclick="setPhase(${i+1})"><span class="num">${i+1}</span><b>${p[0]}</b><small>${p[1]}</small></button>`).join("")}
+    function renderTabs(){document.getElementById("stepTabs").innerHTML=phases.map((p,i)=>`<button class="${phase===i+1?"active":""}" onclick="phase=${i+1};renderAll()">${i+1}　${p[0]}</button>`).join("")}
+    function taskKey(t){return `${role}-${t[0]}-${t[1]}`}
+    function toggleTask(key){done=done.includes(key)?done.filter(x=>x!==key):[...done,key];save();renderAll()}
+    function renderProgress(){const all=tasks[role],n=all.filter(t=>done.includes(taskKey(t))).length,p=Math.round(n/all.length*100);document.getElementById("progressText").textContent=`${n}／${all.length} 已完成`;document.getElementById("progressPct").textContent=p+"%";document.getElementById("progressBar").style.width=p+"%";document.getElementById("homeStatus").textContent=n?`○ 已完成 ${p}%`:"○ 尚未開始"}
+    function renderTasks(){const q=document.getElementById("search").value.trim();document.getElementById("taskTitle").textContent=phases[phase-1][0];const list=tasks[role].filter(t=>t[0]===phase&&(t[1]+t[2]).includes(q));document.getElementById("taskList").innerHTML=list.length?list.map(t=>{const k=taskKey(t),yes=done.includes(k);return `<label class="task ${yes?"done":""}"><input type="checkbox" ${yes?"checked":""} onchange='toggleTask(${JSON.stringify(k)})'><span class="tick">✓</span><span><b>${t[1]} ${t[3]?'<em class="urgent">優先</em>':""}</b><small>${t[2]}</small></span></label>`}).join(""):'<div class="empty">沒有符合的項目。</div>';renderProgress()}
+    function openLiturgy(id){selectedLit=id;showView("liturgy");renderLiturgy()}
+    function renderLiturgy(){document.getElementById("litNav").innerHTML=liturgies.map(l=>`<button class="${selectedLit===l[0]?"active":""}" onclick="selectedLit='${l[0]}';renderLiturgy()">${l[1]}<br><small>${l[2]}</small></button>`).join("");const l=liturgies.find(x=>x[0]===selectedLit);document.getElementById("litCard").innerHTML=`<div class="lit-head"><div><span>${l[2]}</span><h2>${l[1]}</h2></div><div class="verse">建議經文<br><b>${l[3]}</b></div></div><ol class="lit-list">${l[4].map((x,i)=>`<li><span>${String(i+1).padStart(2,"0")}</span><b>${x}</b></li>`).join("")}</ol><div class="tip"><b>牧養提示</b><p>先與家屬確認信仰背景及特別需要；所有人名、稱謂、日期及經文應在印刷前再次核對。</p></div>`}
+    function toggleDoc(k){done=done.includes(k)?done.filter(x=>x!==k):[...done,k];save();renderDocs()}
+    function renderDocs(){document.getElementById("docsGrid").innerHTML=docs.map((g,gi)=>`<article class="card"><h2>${g[0]}</h2>${g.slice(1).map((x,ii)=>{const k=`doc-${gi}-${ii}`,yes=done.includes(k);return `<label class="doc-item ${yes?"done":""}"><input type="checkbox" ${yes?"checked":""} onchange="toggleDoc('${k}')"><span class="tick">✓</span><b>${x}</b></label>`}).join("")}</article>`).join("")}
+    function renderAll(){renderFlow();renderTabs();renderTasks();renderLiturgy();renderDocs()}
+    renderAll();
+  </script>
+</body>
+</html>
